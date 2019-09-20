@@ -1,0 +1,5 @@
+node_modules
+build
+zos.dev*.json
+.zos.session
+.openzeppelin/*
