@@ -3,3 +3,4 @@ build
 zos.dev*.json
 .zos.session
 .openzeppelin/*
+.env

@@ -40,6 +40,10 @@ contract Marketplace is Initializable, MarketplaceStorage {
 
   function initialize() public initializer {}
 
+  function numberOfOffers() public view returns (uint256) {
+    return offerIds.length;
+  }
+
   function createOffer(address _store, uint256 _tokenId, address _currency, uint256 _price) public {
     // TODO: check that _store is an ERC721 using ERC165.supportsInterface
     // TODO: check that _currency is an ERC20
