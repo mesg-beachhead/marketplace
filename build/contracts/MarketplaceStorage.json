@@ -1,0 +1,528 @@
+{
+  "fileName": "MarketplaceStorage.sol",
+  "contractName": "MarketplaceStorage",
+  "source": "pragma solidity ^0.5.2;\n\nimport \"@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol\";\nimport \"@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/IERC721Full.sol\";\n\ncontract MarketplaceStorage {\n  struct Offer {\n    uint256 id;\n\n    IERC721Full store;\n    uint256 tokenId;\n\n    IERC20 currency;\n    uint256 price;\n\n    address seller;\n    address buyer;\n\n    uint createdAt;\n    uint purchasedAt;\n\n    bool active;\n  }\n\n  mapping(uint256 => Offer) public offers;\n  uint256[] public offerIds;\n}\n",
+  "sourcePath": "contracts/MarketplaceStorage.sol",
+  "sourceMap": "200:328:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;200:328:8;;;;;;;;;;",
+  "deployedSourceMap": "200:328:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;200:328:8;;;;;;;;;;;;;;;;;;;;;;;;;;500:25;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;500:25:8;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;457:39;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;457:39:8;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;500:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;457:39::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "offerIds",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "offers",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IERC721Full",
+          "name": "store",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "buyer",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "createdAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "purchasedAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "active",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "contracts/MarketplaceStorage.sol",
+    "exportedSymbols": {
+      "MarketplaceStorage": [
+        666
+      ]
+    },
+    "id": 667,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 635,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol",
+        "id": 636,
+        "nodeType": "ImportDirective",
+        "scope": 667,
+        "sourceUnit": 79,
+        "src": "25:83:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/IERC721Full.sol",
+        "file": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/IERC721Full.sol",
+        "id": 637,
+        "nodeType": "ImportDirective",
+        "scope": 667,
+        "sourceUnit": 230,
+        "src": "109:89:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 666,
+        "linearizedBaseContracts": [
+          666
+        ],
+        "name": "MarketplaceStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "MarketplaceStorage.Offer",
+            "id": 658,
+            "members": [
+              {
+                "constant": false,
+                "id": 639,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "251:10:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 638,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "251:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 641,
+                "name": "store",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "268:17:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC721Full_$229",
+                  "typeString": "contract IERC721Full"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 640,
+                  "name": "IERC721Full",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 229,
+                  "src": "268:11:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC721Full_$229",
+                    "typeString": "contract IERC721Full"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 643,
+                "name": "tokenId",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "291:15:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 642,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "291:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 645,
+                "name": "currency",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "313:15:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$78",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 644,
+                  "name": "IERC20",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 78,
+                  "src": "313:6:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$78",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 647,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "334:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 646,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "334:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 649,
+                "name": "seller",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "354:14:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 648,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "354:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 651,
+                "name": "buyer",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "374:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 650,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "374:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 653,
+                "name": "createdAt",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "394:14:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 652,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "394:4:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 655,
+                "name": "purchasedAt",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "414:16:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 654,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "414:4:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 657,
+                "name": "active",
+                "nodeType": "VariableDeclaration",
+                "scope": 658,
+                "src": "437:11:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 656,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "437:4:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Offer",
+            "nodeType": "StructDefinition",
+            "scope": 666,
+            "src": "232:221:8",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 662,
+            "name": "offers",
+            "nodeType": "VariableDeclaration",
+            "scope": 666,
+            "src": "457:39:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Offer_$658_storage_$",
+              "typeString": "mapping(uint256 => struct MarketplaceStorage.Offer)"
+            },
+            "typeName": {
+              "id": 661,
+              "keyType": {
+                "id": 659,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "465:7:8",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "457:25:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Offer_$658_storage_$",
+                "typeString": "mapping(uint256 => struct MarketplaceStorage.Offer)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 660,
+                "name": "Offer",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 658,
+                "src": "476:5:8",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Offer_$658_storage_ptr",
+                  "typeString": "struct MarketplaceStorage.Offer"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 665,
+            "name": "offerIds",
+            "nodeType": "VariableDeclaration",
+            "scope": 666,
+            "src": "500:25:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 663,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "500:7:8",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 664,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "500:9:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 667,
+        "src": "200:328:8"
+      }
+    ],
+    "src": "0:529:8"
+  },
+  "bytecode": "0x60806040523480156100115760006000fd5b50610017565b61030a806100266000396000f3fe60806040523480156100115760006000fd5b506004361061003b5760003560e01c8063110b9d89146100415780638a72ea6a146100845761003b565b60006000fd5b61006e600480360360208110156100585760006000fd5b81019080803590602001909291905050506101ba565b6040518082815260200191505060405180910390f35b6100b16004803603602081101561009b5760006000fd5b81019080803590602001909291905050506101e2565b604051808b81526020018a73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018981526020018873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018781526020018673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001848152602001838152602001821515151581526020019a505050505050505050505060405180910390f35b6001600050818154811015156101cc57fe5b906000526020600020900160005b915090505481565b60006000506020528060005260406000206000915090508060000160005054908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160005054908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060040160005054908060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060060160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060070160005054908060080160005054908060090160009054906101000a900460ff1690508a56fea265627a7a7231582054e52cec6956527b791d324c9597a5fadcc2a071c184c51ea8c1d28012a5a78164736f6c634300050b0032",
+  "deployedBytecode": "0x60806040523480156100115760006000fd5b506004361061003b5760003560e01c8063110b9d89146100415780638a72ea6a146100845761003b565b60006000fd5b61006e600480360360208110156100585760006000fd5b81019080803590602001909291905050506101ba565b6040518082815260200191505060405180910390f35b6100b16004803603602081101561009b5760006000fd5b81019080803590602001909291905050506101e2565b604051808b81526020018a73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018981526020018873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018781526020018673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001848152602001838152602001821515151581526020019a505050505050505050505060405180910390f35b6001600050818154811015156101cc57fe5b906000526020600020900160005b915090505481565b60006000506020528060005260406000206000915090508060000160005054908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160005054908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060040160005054908060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060060160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060070160005054908060080160005054908060090160009054906101000a900460ff1690508a56fea265627a7a7231582054e52cec6956527b791d324c9597a5fadcc2a071c184c51ea8c1d28012a5a78164736f6c634300050b0032",
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang",
+    "optimizer": {},
+    "evmVersion": "constantinople"
+  }
+}
